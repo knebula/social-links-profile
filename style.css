@@ -88,7 +88,7 @@ body {
   background-color: var(--clr-neutral-600);
   display: grid;
   gap: 1rem;
-  max-width: 400px;
+  max-width: 600px;
   justify-content: center;
   text-align: center;
   padding: 2rem;
