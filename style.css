@@ -1,0 +1,148 @@
+:root {
+  --clr-primary-400: hsl(75, 94%, 57%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(0, 0%, 20%);
+  --clr-neutral-600: hsl(0, 0%, 12%);
+  --clr-neutral-900: hsl(0, 0%, 8%);
+
+  --ff-base: "Inter", Arial, sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+/* RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: var(--ff-base);
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+/* SOCIAL CARD STYLE */
+.social-card {
+  background-color: var(--clr-neutral-600);
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.social-card-avatar {
+  display: flex;
+  justify-content: center;
+}
+.social-card-avatar > img {
+  max-width: 30%;
+  border-radius: 50%;
+  border: var(--clr-primary-400) solid 0.1rem;
+}
+
+.social-card-title h1 {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.social-card-title h2 {
+  color: var(--clr-primary-400);
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+}
+
+.social-card p {
+  font-size: 0.75rem;
+}
+.button-links {
+  display: grid;
+  gap: 0.75rem;
+}
+.button {
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+  font-weight: var(--fw-bolder);
+  font-size: 0.7rem;
+  border: 0;
+  padding: 0.5rem 5rem;
+  border-radius: 0.5em;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
+
+@media (max-width: 399px) {
+  .social-card {
+    padding: 1rem;
+  }
+  .button {
+    padding: 0.5rem 4.5rem;
+  }
+}
